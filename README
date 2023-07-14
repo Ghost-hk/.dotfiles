@@ -1,0 +1,23 @@
+sudo add-apt-repository ppa:aslatter/ppa -y
+sudo apt update && sudo apt upgrade
+sudo apt install rofi bspwm sxhkd zsh alacritty polybar feh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+pkg-config libuv cairo libxcb python3 xcb-proto xcb-util-image xcb-util-wm python-sphinx python-packaging
+
+https://linuxhint.com/enable-hibernate-ubuntu-22-04-lts/
+
+sudo swapoff /swapfile
+sudo dd if=/dev/zero of=/swapfile bs=1MB count=$((16*1024)) status=progress
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo gedit /etc/fstab
+
+
+62334976
+9d273d0d-1a70-482a-ac31-ee0b0dc598c1
+/dev/nvme0n1p2 
